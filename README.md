@@ -43,6 +43,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
   Algumas das funcionalidades são: personalização total, mudança da paleta de cores, controle de itens, dinheiro e perícias assim como da vida e mana.
 
+  ### **PARA QUE FUNCIONE**
+  Para que tudo ocorra bem, faça o upload na aplicação de um .json seguindo o formato deixado nos documentos.
+  O nome do exemplo é `rpg-sheet.example`.
+
   <img alt="Tela inicial do RPGSheet" src=".github/full.png" width="100%">
 
 - [Visite o projeto online](https://rpg-sheet-pi.vercel.app/)
