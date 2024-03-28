@@ -1,0 +1,51 @@
+{
+  "profile": {
+    "name": "<NOME DO PERSONAGEM>",
+    "age": <IDADE: numero>,
+    "lore": "<HISTORIA DO PERSONAGEM>",
+    "imageUrl": "<URL DA IMAGEM>",
+    "physicist": <QUANTOS PONTOS EM FISICO: numero>,
+    "mental": <QUANTOS PONTOS EM MENTAL: numero>,
+    "life": <VIDA ATUAL: numero>,
+    "mana": <MANA ATUAL: numero>,
+    "money": <DINHEIRO ATUAL: numero>,
+    "drunkSkill": "<ABILIDADE DE BEBADO>"
+  },
+  "proficiencies": [
+    "<PROEFICIENCIA OU MAGIA>",
+    <VALOR DO ATRIBUTO ACIMA: numero>,
+    "Aparência",
+    3,
+    "Combate: Espada X",
+    3,
+    "Combate: Socos",
+    1,
+    "Condução",
+    3,
+    "Conhecimento",
+    0
+  ],
+  "inventory": [
+    {
+      "<NOME DO ITEM>": {
+        "damage": <DANO DO ITEM (pensando em armas apenas): numero>,
+        "range": <ALCANCE DO ITEM (pensando em armas apenas): numero>,
+        "quantity": <QUANTIDADE DO ITEM: numero>
+      }
+    },
+    {
+      "Espada Lightbringer": {
+        "damage": 2,
+        "range": 3,
+        "quantity": 1
+      }
+    },
+    {
+      "Isqueiro": {
+        "damage": 0,
+        "range": 0,
+        "quantity": 1
+      }
+    }
+  ]
+}
