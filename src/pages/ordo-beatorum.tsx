@@ -337,7 +337,7 @@ export function OrdoBeatorum() {
                   <Box.Icon>
                     <BookOpenText size={26} className="text-primary" />
                   </Box.Icon>
-                  Perícias
+                  Perícias e Magias
                 </Box.Header>
                 <Box.Content>
                   <Table>
