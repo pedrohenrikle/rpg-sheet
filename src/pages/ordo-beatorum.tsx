@@ -559,7 +559,7 @@ export function OrdoBeatorum() {
 
             <ResizableHandle />
 
-            <ResizablePanel defaultSize={30}>
+            <ResizablePanel defaultSize={35}>
               {/* perfil */}
               <Box.Root className="max-h-fit">
                 <Box.Header className="flex-col">
