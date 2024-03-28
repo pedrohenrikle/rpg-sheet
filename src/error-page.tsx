@@ -1,8 +1,16 @@
 import { useRouteError } from 'react-router-dom'
 
 export default function ErrorPage() {
-  const error = useRouteError()
+  const error: Error | undefined = useRouteError() as Error | undefined
   console.error(error)
+
+  let errorMessage = ''
+
+  if (error instanceof Error) {
+    errorMessage = error.message
+  } else {
+    errorMessage = 'Erro desconhecido'
+  }
 
   return (
     <div className="flex w-screen h-screen justify-center items-center flex-col gap-3">
@@ -12,9 +20,7 @@ export default function ErrorPage() {
       </p>
       <p className="flex mt-5 items-center gap-2 text-lg">
         Aparentemente, foi um erro do tipo:
-        <i className="font-bold text-xl text-primary mt-0.5">
-          {error.statusText || error.message}
-        </i>
+        <i className="font-bold text-xl text-primary mt-0.5">{errorMessage}</i>
       </p>
       <img
         className="w-96 rounded-lg"

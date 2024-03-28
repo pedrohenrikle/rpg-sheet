@@ -91,14 +91,35 @@ export function OrdoBeatorum() {
   useEffect(() => {
     const storedData = localStorage.getItem('ordo-beatorum')
     if (storedData) {
-      const file = new Blob([storedData], { type: 'application/json' })
-      const fileInput = {
-        target: {
-          files: [file],
-        },
-      }
+      try {
+        const parsedData = JSON.parse(storedData)
+        const jsonFile = new File(
+          [JSON.stringify(parsedData)],
+          'ordo-beatorum.json',
+          { type: 'application/json' },
+        )
 
-      handleFileUpload(fileInput)
+        const dataTransfer = new DataTransfer()
+        dataTransfer.items.add(jsonFile)
+
+        const fileList = dataTransfer.files
+
+        const inputElement = document.createElement('input')
+        inputElement.type = 'file'
+        inputElement.files = fileList
+
+        const event = new Event('change', { bubbles: true })
+        Object.defineProperty(event, 'target', {
+          value: inputElement,
+          writable: false,
+        })
+
+        const eventConverted = event as unknown
+
+        handleFileUpload(eventConverted as ChangeEvent<HTMLInputElement>)
+      } catch (error) {
+        console.error('Erro ao analisar dados do armazenamento local:', error)
+      }
     }
   }, [])
 
