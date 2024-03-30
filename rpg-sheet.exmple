@@ -9,7 +9,7 @@
     "life": <VIDA ATUAL: numero>,
     "mana": <MANA ATUAL: numero>,
     "money": <DINHEIRO ATUAL: numero>,
-    "drunkSkill": "<ABILIDADE DE BEBADO>"
+    "drunkSkill": "<HABILIDADE DE BEBADO>"
   },
   "proficiencies": [
     "<PROEFICIENCIA OU MAGIA>",
